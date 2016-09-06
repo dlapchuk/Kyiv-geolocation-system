@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+<!--{% load staticfiles %}
+-->
+{% block outFacts %}
+
+<h1 class="text-center">Рейтинг туристических мест</h1>
+<br/>
+<br/>
+{% csrf_token %}
+<table class="table">
+    {% csrf_token %}
+    <tr>
+        <th></th>
+        <th>Название</th>
+        <th>Средний рейтинг</th>
+        <th>Проголосовало</th>
+    </tr>
+
+        {% for raw in table %}
+        <tr>
+            {% csrf_token %}
+            <td></td>
+            <td>
+                <form action="/dbSearch/showFact/" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-link btn-xs" value="{{raw.2}}" name="show">{{raw.4}}</button>
+                </form>
+            </td>
+            <td>{{raw.1}}</td>
+            <td>{{raw.0}}</td>
+
+        </tr>
+        {% endfor %}
+</table>
+
+{% endblock %}

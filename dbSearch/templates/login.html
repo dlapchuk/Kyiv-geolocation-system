@@ -1,0 +1,24 @@
+{% extends 'main.html' %}
+<!--{% load staticfiles %}
+-->
+{% block outFacts %}
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+<div class="text-center auth">
+            <form action = "login/" method="post">
+                    {% csrf_token %}
+            <label for="login">Login</label>
+            <input type="text" name ="login"  id="login" class="form-control"/>
+            <label for="password">Password</label>
+            <input type="password" name ="password" class="form-control"  id="password"/>
+            <br/>
+                <p style="color: red;">{{error_message}}</p>
+                <br/>
+                <button type="submit"  class="btn btn-xs">Log in</button>
+        </form>
+
+
+</div>
+{% endblock %}

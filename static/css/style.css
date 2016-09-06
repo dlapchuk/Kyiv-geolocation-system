@@ -1,0 +1,12 @@
+.flt-left{
+    float:left;
+}
+.flt-right{
+    float:right;
+}
+label{
+    margin:0 25px;
+}
+td,th{
+    text-align: center;
+}

@@ -1,0 +1,86 @@
+{% extends 'main.html' %}
+{% block outFacts %}
+<style>
+    label{
+        margin:0 25px;
+    }
+</style>
+
+<h1 class="text-center">Добавить достопримечательность</h1>
+<br/>
+<br/>
+
+<form class="form-inline text-center" action="/dbSearch/addFact/confirm/" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label>Название</label>
+        <input type="text" class="form-control" value="{{ row.1 }}" name="name"/>
+    </div>
+    <br/>
+    <br/>
+    <div class="form-group">
+        <label>Вид</label>
+        <select class="form-control" name="type">
+            {% for name in types %}
+                {% if name == row.2 %}
+                    <option selected="selected">{{ name }}</option>
+                {% else %}
+                    <option>{{name}}</option>
+                {% endif %}
+
+            {% endfor %}
+        </select>
+    </div>
+    <br/>
+    <br/>
+    <div class="form-group">
+        <label>Район</label>
+        <select class="form-control" name="distr">
+            {% for name in districts %}
+                {% if name == row.6 %}
+                    <option selected="selected">{{ name }}</option>
+                {% else %}
+                    <option>{{name}}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+    </div>
+    <br/>
+    <br/>
+    <div class="form-group">
+        <label>Адрес картинки</label>
+        <input type="text" size="80"  class="form-control" value="{{ raw.3 }}" name="image"/>
+    </div>
+    <br/>
+    <br/>
+    <div class="form-group">
+        <label>Описание</label>
+        <!--<textarea name="type" class="form-control" value="{{ row.7 }}" cols="40" rows="3" name="description"></textarea>-->
+        <textarea type="text" size="100" class="form-control" value="{{ raw.7 }}" name="description"></textarea>
+    </div>
+    <br/>
+    <br/>
+    <div class="form-group">
+        <label>Долгота</label>
+        <input type="number" step="0.000001" class="form-control" value="{{ row.4 }}" name="longitude"/>
+    </div>
+    <br/>
+    <br/>
+    <div class="form-group">
+        <label>Широта</label>
+        <input type="number" step="0.000001" class="form-control" value="{{ row.5 }}" name="latitude"/>
+    </div>
+    <br/>
+
+    <br/>
+    <br/>
+    <div class="text-right">
+        <input type="submit" class="btn btn-link" value="Add"/>
+    </div>
+
+
+
+</form>
+
+
+{% endblock %}

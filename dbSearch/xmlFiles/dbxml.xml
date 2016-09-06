@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<sales_db>
+    <customer>
+        <name>Cucita BookShop</name>
+        <second_name>42 Aspen Drive Union, NJ 07083</second_name>
+        <phone>0564757457</phone>
+        <email>cucitabook@gmail.com</email>
+    </customer>
+
+    <customer>
+
+        <name>Foyles Bookstore</name>
+        <second_name>598 Academy Street Romeoville, IL 60446</second_name>
+        <phone>05556443244</phone>
+        <email>foyles@gmail.com</email>
+    </customer>
+
+    <customer>
+        <name>Blackwell's Shopfront</name>
+        <second_name>776 Sycamore Street Dedham, MA 02026</second_name>
+        <phone>0555644345</phone>
+        <email>blackwell@gmail.com</email>
+    </customer>
+
+    <customer>
+        <name>Hungerford Bookshop</name>
+        <second_name>606 Cottage Street Williamstown, NJ 08094</second_name>
+        <phone>0535433454</phone>
+        <email>hungerford@gmail.com</email>
+    </customer>
+
+    <customer>
+        <name>Rikardo Books</name>
+        <second_name>842 Buckingham Drive Greer, SC 29650</second_name>
+        <phone>0513434344</phone>
+        <email>ricardo@gmail.com</email>
+    </customer>
+
+    <distributor>  
+        <name>Penguin Random House</name>
+        <email>penguin@gmail.com</email>
+        <phone>09846465655</phone>
+        <city>London</city>
+    </distributor>
+
+    <distributor>
+        <name>Oxford University Press</name>
+        <email>oxford@gmail.com</email>
+        <phone>0935763769</phone>
+        <city>London</city>
+    </distributor>
+
+    <distributor>
+        <name>Atlantic Books</name>
+        <email>atlantic@gmail.com</email>
+        <phone>0935763769</phone>
+        <city>London</city>
+    </distributor>
+
+    <distributor>
+
+        <name>Icon Books</name>
+        <email>icon@gmail.com</email>
+        <phone>03454343369</phone>
+        <city>London</city>
+    </distributor>
+
+    <distributor>
+
+        <name>Pearson Education</name>
+        <email>pearson@gmail.com</email>
+        <phone>0935324269</phone>
+        <city>New York</city>
+    </distributor>
+
+    <product>
+
+        <name>Virginia Woolf - The Waves</name>
+        <weight>200</weight>
+        <price>55</price>
+        <description> First published in 1931, is Virginia Woolf's most experimental novel</description>
+    </product>
+
+    <product>
+
+        <name>Oscar Wilde - The Picture of Dorian Gray</name>
+        <weight>122</weight>
+        <price>79</price>
+        <description>A philosophical novel first published complete in the July 1890</description>
+    </product>
+
+    <product>
+        <name>F. Scott Fitzgerald - The Great Gatsby</name>
+        <weight>540</weight>
+        <price>88</price>
+        <description>Is a 1925 novel written by American author F. Scott Fitzgerald</description>
+    </product>
+
+    <product>
+        <name>Arthur Conan Doyle - Sherlock Holmes</name>
+        <weight>620</weight>
+        <price>108</price>
+        <description>A fictional character created by British author and physician Sir Arthur Conan Doyle</description>
+    </product>
+
+    <product>
+        <name>J. K. Rowling - Harry Potter</name>
+        <weight>1400</weight>
+        <price>1134</price>
+        <description>Fantasy novels written by British author J. K. Rowlin</description>
+    </product>
+
+
+
+
+</sales_db>

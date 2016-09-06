@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>KyivGo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="/static/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="/static/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+       <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?sensor=true&#038;ver=1.1'></script>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/dbSearch/">КиевGo</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="/dbSearch/markStat/">Рейтинг</a></li>
+                <li><a href="/dbSearch/outFacts/">Достопримечательности</a></li>
+            </ul>
+            <form class="navbar-form pull-right">
+                {% if user.is_authenticated %}
+                <ul class="nav">
+                <!--<p>Hi, {{user.username }}</p>-->
+                    <li><a href="/dbSearch/logout/">Выйти</a></li>
+                    {% for group in user.groups.all %}{%if group.name = "users"%}
+                    <li><a href="/dbSearch/favorite/">Мои оценки</a></p></li>
+                    {%endif%}{% endfor %}
+                </ul>
+                    {% else %}
+                <ul class="nav">
+                <li><a href="/dbSearch/login/">Войти</a></li>
+                <li><a href="/dbSearch/signin/">Регистрация</a></li>
+                    </ul>
+        <br/>
+
+        {% endif %}
+            </form>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+
+      <!-- Example row of columns -->
+    <div class="col-lg-9">
+
+       {% block outFacts %}
+        {% endblock %}
+
+    </div>
+      <hr>
+
+      <footer>
+        <p>&copy; Lapchuk 2015</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap-transition.js"></script>
+    <script src="/static/js/bootstrap-alert.js"></script>
+    <script src="/static/js/bootstrap-modal.js"></script>
+    <script src="/static/js/bootstrap-dropdown.js"></script>
+    <script src="/static/js/bootstrap-scrollspy.js"></script>
+    <script src="/static/js/bootstrap-tab.js"></script>
+    <script src="/static/js/bootstrap-tooltip.js"></script>
+    <script src="/static/js/bootstrap-popover.js"></script>
+    <script src="/static/js/bootstrap-button.js"></script>
+    <script src="/static/js/bootstrap-collapse.js"></script>
+    <script src="/static/js/bootstrap-carousel.js"></script>
+    <script src="/static/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

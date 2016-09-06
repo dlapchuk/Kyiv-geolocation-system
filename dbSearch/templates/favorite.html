@@ -1,0 +1,32 @@
+{% extends 'main.html' %}
+<!--{% load staticfiles %}
+-->
+{% block outFacts %}
+
+
+<br/>
+<br/>
+
+<table class="table">
+    <tr>
+    </tr>
+
+        {% for raw in table %}
+
+        <tr>
+            <td></td>
+            <td>
+                <form action="/dbSearch/showFact/" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-link btn-xs" value="{{raw.2}}" name="show">{{raw.3}}</button>
+                </form>
+            </td>
+            <td>{{raw.4}}</td>
+
+        </tr>
+
+
+        {% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+<!--{% load staticfiles %}
+-->
+{% block outFacts %}
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+<div class="reg text-center">
+            <form action = "signin/" method="post" class="text-left">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <br/>
+                <p style="color: red;">{{ message }}</p>
+                <br/>
+                <button type="submit"  class="btn btn-xs">Sign in</button>
+        </form>
+
+
+</div>
+{% endblock %}
